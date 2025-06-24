@@ -1,27 +1,3 @@
-<p align="center">
-	<img src="https://www.ortussolutions.com/__media/coldbox-185-logo.png">
-	<br>
-	<img src="https://www.ortussolutions.com/__media/wirebox-185.png" height="125">
-	<img src="https://www.ortussolutions.com/__media/cachebox-185.png" height="125" >
-	<img src="https://www.ortussolutions.com/__media/logbox-185.png"  height="125">
-</p>
-
-<p align="center">
-	<a href="https://github.com/ColdBox/coldbox-platform/actions/workflows/snapshot.yml"><img src="https://github.com/ColdBox/coldbox-platform/actions/workflows/snapshot.yml/badge.svg" alt="ColdBox Snapshots" /></a>
-	<a href="https://forgebox.io/view/coldbox"><img src="https://forgebox.io/api/v1/entry/coldbox/badges/downloads" alt="Total Downloads" /></a>
-	<a href="https://forgebox.io/view/coldbox"><img src="https://forgebox.io/api/v1/entry/coldbox/badges/version" alt="Latest Stable Version" /></a>
-	<a href="https://forgebox.io/view/coldbox"><img src="https://img.shields.io/badge/License-Apache2-brightgreen" alt="Apache2 License" /></a>
-</p>
-
-<p align="center">
-	Copyright Since 2005 ColdBox Platform by Luis Majano and Ortus Solutions, Corp
-	<br>
-	<a href="https://www.coldbox.org">www.coldbox.org</a> |
-	<a href="https://www.ortussolutions.com">www.ortussolutions.com</a>
-</p>
-
-----
-
 # ColdBox BoxLang Application
 
 This template can be your starting ground for your BoxLang ColdBox HMVC web applications.  You must use [CommandBox](http://www.ortussolutions.com/products/commandbox) to track your dependencies and start embedded servers.
@@ -36,11 +12,15 @@ box install
 
 This will setup all the needed dependencies for each application template.  You can then start the BoxLang server:
 
-```bash
-box server start
-```
-
 Code to your liking and enjoy!
+
+## Useful CommandBox commands
+
+```bash
+box server start --debug --console
+box server forget --all
+box artifacts clean
+```
 
 ## Java Dependencies
 
