@@ -1,0 +1,50 @@
+{
+    "name":"My ColdBox App",
+    "version":"1.0.0",
+    "author":"aliaspooryorik",
+    "location":"forgeboxStorage",
+    "description":"A headless CMS built with ColdBox and BoxLang",
+    "type":"projects",
+    "keywords":[
+        "coldbox",
+        "boxlang",
+        "cms",
+        "headless",
+        "api"
+    ],
+    "homepage":"https://github.com/aliaspooryorik/akephaloi-cms",
+    "documentation":"",
+    "repository":{
+        "type":"git",
+        "url":""
+    },
+    "bugs":"https://github.com/aliaspooryorik/akephaloi-cms/issues",
+    "shortDescription":"Headless CMS with API and Admin interface",
+    "instructions":"",
+    "changelog":"",
+    "dependencies":{
+        "coldbox":"^7.4.0"
+    },
+    "devDependencies":{
+        "testbox":"^5.0.0",
+        "commandbox-boxlang":"*",
+        "commandbox-cfformat":"*"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"coldbox/"
+    },
+    "scripts":{
+        "postInstall":"pathExists .env || cp .env.example .env && package set ignore=[]",
+        "format":"cfformat run config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.bx ./.cfformat.json --overwrite",
+        "format:check":"cfformat check config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.bx ./.cfformat.json",
+        "format:watch":"cfformat watch path='config/,handlers/,interceptors/,models/,modules_app/,tests/specs/,*.bx' settingsPath='.cfformat.json'",
+        "docker:build":"!docker build --no-cache -t my-coldbox-app -f ./docker/Dockerfile ./",
+        "docker:run":"!docker run -it -p 8080:8080 my-coldbox-app",
+        "docker:bash":"!docker run -it my-coldbox-app /bin/bash",
+        "docker:stack":"!docker compose -f docker/docker-compose.yaml ${1}"
+    },
+    "ignore":[],
+    "language":"BoxLang",
+    "slug":"my-coldbox-app"
+}
